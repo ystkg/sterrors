@@ -7,13 +7,13 @@ Go言語の `error` にスタックトレースを付けるスケルトンコー
 
 ## 推奨環境
 
-Go version 1.24以降
+Go version 1.27以降
 
 例
 
 ```ShellSession
 $ go version
-go version go1.24.2 linux/amd64
+go version go1.27.1 linux/amd64
 ```
 
 ## 使用例
@@ -66,17 +66,17 @@ func main() {
 
 ```json
 {
-  "time": "2025-04-12T09:37:07.55737061+09:00",
+  "time": "2026-09-06T09:00:02.542217674+09:00",
   "level": "ERROR",
   "msg": "ParseInt16",
   "stackTraces": [
     {
       "error": "strconv.ParseInt: parsing \"abc\": invalid syntax",
       "stackTrace": [
-        "main.ParseInt16(/main/main.go:15)",
-        "main.main(/main/main.go:35)",
-        "runtime.main(/usr/local/go/src/runtime/proc.go:283)",
-        "runtime.goexit(/usr/local/go/src/runtime/asm_amd64.s:1700)"
+        "main.ParseInt16(ex1/main.go:15)",
+        "main.main(ex1/main.go:35)",
+        "runtime.main(runtime/proc.go:302)",
+        "runtime.goexit(runtime/asm_amd64.s:1264)"
       ]
     }
   ]
